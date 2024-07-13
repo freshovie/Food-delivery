@@ -1,20 +1,20 @@
 import React from "react";
-import { HeroList } from "./Components";
-import Hero from "./Models/Hero";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./Navigation/Navbar";
+import Footer from "./Footer/Footer";
+import HeroPage from "./Components/HeroPage";
 
-const heros: Hero[] = [
-  { id: 1, title: "Hero 1" },
-  { id: 2, title: "Hero 2" },
-];
-
-const Display: React.FC = () => {
+const Display = () => {
   return (
-    <div>
-      <h1>Hero List</h1>
-      <header className="App-header">Food Delivery</header>
-      <HeroList items={heros} />
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<HeroPage />} />
+        {/* Add other routes here as needed */}
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   );
-}
+};
 
 export default Display;

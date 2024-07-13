@@ -1,0 +1,30 @@
+@import "variables";
+
+.footer {
+  .footer-logo {
+    cursor: pointer;
+  }
+  .goIcons {
+    gap: 2rem;
+
+    .icons {
+      color: $quaternary-color;
+      font-size: 40px;
+      transition: color 0.3s ease;
+      cursor: pointer;
+
+      &:hover {
+        color: $text-color;
+      }
+    }
+  }
+
+  .copy-write {
+    li {
+      a {
+        text-decoration: none;
+        font-weight: 500;
+      }
+    }
+  }
+}

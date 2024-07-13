@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.scss';
+import '../Styles/style.scss';
 import { motion } from 'framer-motion';
 
 interface HeroPageProps {

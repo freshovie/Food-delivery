@@ -1,0 +1,40 @@
+@import "variables";
+
+.navbar {
+  .nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+  }
+  .navbar-collapse {
+    .navbar-nav {
+      gap: 3rem;
+      a {
+        color: $text-color;
+        font-weight: 600;
+        &:hover {
+          color: $quaternary-color;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 351px) {
+    .container-fluid {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    .navbar-collapse {
+      .navbar-nav {
+        gap: 0.1rem;
+      }
+    }
+  }
+}
