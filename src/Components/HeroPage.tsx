@@ -24,27 +24,34 @@ const HeroPage: React.FC = () => {
               Download the Bella Onojie's food app now on
             </p>
             <div className="btn-div">
-              <Button
-                label="Play Store"
-                className="obtn"
+              <Button label="Play Store" className="obtn" />
+              <Button label="App Store" className="ibtn" />
+            </div>
+          </div>
+          <div className="mobi-app">
+            <div className="row">
+            <div className="col-sm-12 col-md-12 col-lg-1"></div>
+            <div className="col-sm-12 col-md-12 col-lg-10">
+            <div className="container mobi-view">
+              <img src={appAd} alt="App advertisement" className="ad-img" />
+              <img src={FoodAd} alt="Food advertisement" className="ad-img" />
+            </div>
+            <div className="s-format">
+              <hr
+                style={{
+                  height: "2px",
+                  borderWidth: "0",
+                  color: "gray",
+                  backgroundColor: "gray",
+                }}
               />
-              <Button
-                label="App Store"
-                className="ibtn"
-              />
+              <h1 className="s-text"> How the app works</h1>
+            </div>
+            </div>
+            <div className="col-sm-12 col-md-12 col-lg-1"></div>
             </div>
           </div>
         </motion.div>
-      <div className="mobi-app">
-        <div className="mobi-view">
-        <img src={FoodAd} alt="Food advertisement" />
-        <img src={appAd} alt="App advertisement" />
-        </div>
-        <div className="s-format">
-        <hr />
-        <h1 className="s-text"> How the app works</h1>
-        </div>
-      </div>
       </div>
     </React.Fragment>
   );
