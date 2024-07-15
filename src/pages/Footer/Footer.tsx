@@ -1,6 +1,6 @@
 import React from "react";
-import "../Styles/footer.scss";
-import { Left } from "../assets";
+import "../../Styles/footer.scss";
+import { Left } from "../../assets";
 import { FaTwitter, FaFacebookSquare } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 import { motion } from "framer-motion";

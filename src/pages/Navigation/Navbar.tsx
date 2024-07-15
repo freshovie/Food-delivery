@@ -1,6 +1,6 @@
 import React from "react";
-import "../Styles/navbar.scss";
-import { Left } from "../assets";
+import "../../Styles/navbar.scss";
+import { Left } from "../../assets";
 import { HiOutlineMenuAlt1 } from "react-icons/hi";
 import { motion } from "framer-motion";
 
@@ -9,7 +9,7 @@ interface NavbarProps {}
 const Navbar: React.FC<NavbarProps> = () => {
   return (
     <motion.nav
-      className="navbar navbar-expand-lg navbar-light bg-body-tertiary"
+      className="navbar navbar-expand-lg navbar-light bg-body-tertiary fixed-top"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
