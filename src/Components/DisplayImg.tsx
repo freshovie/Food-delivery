@@ -21,7 +21,9 @@ const DisplayImg: React.FC<DisplayImagesProps> = ({
         <div className="row">
           <div className="col-sm-12 col-md-12 col-lg-1"></div>
           <div className="col-sm-12 col-md-12 col-lg-10">
-            <img src={images} alt={htext} />
+            <div className="magecenter">
+              <img src={images} alt={htext} />
+            </div>
             <div className="dwords">
               <p className="front-p">{ptext}</p>
               <h2 className="front-h">{htext}</h2>

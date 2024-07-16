@@ -47,11 +47,10 @@
 .p-text,
 .h-text,
 .s-text {
-  margin-top: 10px;
   font-weight: 400;
   color: $tertiary-color;
   text-align: center;
-  margin-bottom: 20px;
+  margin: $base-spacing 0;
 }
 .p-text {
   font-size: 24px;
@@ -74,42 +73,157 @@
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.heropage {
-    margin-top: 130px;
-    .heropage__container {
-      position: relative; /* Ensure the container is positioned relatively */
-      .hero-mage {
-        background: url(../assets/HeroImg.png);
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 100vh;
-        width: 100%;
+.dwords {
+  text-align: left;
+  margin-left: 20px;
+  .front-p {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: $quaternary-color;
+  }
+  .front-h {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: $back-color;
+  }
+  .back-p {
+    font-size: 16px;
+    color: $p-color;
+  }
+}
+
+.magecenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 20px;
+}
+
+.firstdiv,
+.secondiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 20px;
+
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    .row {
+      .col-sm-12,
+      .col-md-12,
+      .col-lg-10 {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        flex-direction: row;
         align-items: center;
-        position: relative; /* Ensure the hero image is positioned relatively */
-        .phones {
-            .mee{
-                margin-top: 15rem;
-            }
-            position: absolute;
-            top: 66%;
-            display: flex;
+        justify-content: center;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .container {
+      .row {
+        flex-direction: column;
+        .col-sm-12,
+        .col-md-12,
+        .col-lg-10 {
+          flex-direction: column;
+          align-items: center;
+          .magecenter {
+            margin: 0;
             align-items: center;
+            display: flex;
             justify-content: center;
-            z-index: 2000;
-            .ad-img {
-                width: 100%;
-              }
+            img {
+              max-width: 100%;
+              object-fit: cover;
+            }
           }
+          .dwords {
+            width: 100%;
+            text-align: center;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.secondiv {
+  .container {
+    .row {
+      .col-sm-12,
+      .col-md-12,
+      .col-lg-10 {
+        flex-direction: row-reverse;
+        .magecenter {
+          margin-right: -8rem;
+        }
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .container {
+      .row {
+        .col-sm-12,
+        .col-md-12,
+        .col-lg-10 {
+          flex-direction: column;
+          .magecenter {
+            margin: 0;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            img {
+              max-width: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.heropage {
+  margin-top: 130px;
+  .heropage__container {
+    position: relative; /* Ensure the container is positioned relatively */
+    .hero-mage {
+      background: url(../assets/HeroImg.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 100dvh;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative; /* Ensure the hero image is positioned relatively */
+      .phones {
+        .mee {
+          margin-top: 7rem;
+        }
+        position: absolute;
+        top: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2000;
+        .ad-img {
+          width: 100%;
+          margin: 0 $base-spacing;
+        }
       }
       .overlay {
-        position: absolute; /* Overlay should be absolutely positioned */
+        position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
+        height: 100dvh;
         background-color: $overlay-bg-color; /* Semi-transparent background */
         display: flex;
         flex-direction: column;
@@ -119,9 +233,7 @@
         z-index: 1000; /* Ensure the overlay is on top */
       }
     }
-}
-
-.heropage {
+  }
   @media screen and (max-width: 768px) {
     .hero-img {
       display: none;
@@ -142,17 +254,17 @@
         flex-direction: column;
       }
     }
-    .mobi-app {
-      flex-direction: column;
+    .phones {
+      //   flex-direction: column;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       position: relative;
       width: 100%;
       top: auto;
-      .mobi-view {
-        flex-wrap: wrap;
-        .ad-img {
-          width: 280px;
-          height: auto;
-        }
+      .ad-img {
+        width: 280px;
+        height: auto;
       }
     }
   }
@@ -168,9 +280,9 @@
 }
 
 .s-format {
-    .s-text {
-      font-size: 44px;
-      font-weight: 500;
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    }
+  .s-text {
+    font-size: 44px;
+    font-weight: 500;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   }
+}

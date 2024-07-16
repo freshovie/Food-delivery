@@ -14,7 +14,7 @@ const HeroPage: React.FC = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-<div className="hero-mage">
+          <div className="hero-mage">
             <div className="overlay">
               <h5 className="r-text">Food app</h5>
               <h2 className="h-text">
@@ -28,14 +28,14 @@ const HeroPage: React.FC = () => {
                 <button className="ibtn">Appstore</button>
               </div>
             </div>
-            <div className="phones">
-                <div>
-                    <img src={appAd} alt="" className="ad-img" />
-                </div>
-                <div className="mee">
-                    <img src={FoodAd} alt="" className="ad-img" />
-                </div>
-            </div>
+            {/* <div className="phones">
+              <div>
+                <img src={appAd} alt="" className="ad-img" />
+              </div>
+              <div className="mee">
+                <img src={FoodAd} alt="" className="ad-img" />
+              </div>
+            </div> */}
           </div>
         </motion.div>
       </div>
