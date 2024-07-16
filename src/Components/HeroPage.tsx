@@ -29,8 +29,12 @@ const HeroPage: React.FC = () => {
               </div>
             </div>
             <div className="phones">
-              <img src={appAd} alt="" className="ad-img" />
-              <img src={FoodAd} alt="" className="ad-img" />
+                <div>
+                    <img src={appAd} alt="" className="ad-img" />
+                </div>
+                <div className="mee">
+                    <img src={FoodAd} alt="" className="ad-img" />
+                </div>
             </div>
           </div>
         </motion.div>
