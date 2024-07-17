@@ -1,7 +1,6 @@
-import HeroPage from "./HeroPage";
-import HeroList from "./HeroList";
-import Button from "./Button";
+import HeroFront from "./HeroFront";
 import DFront from "./DFront";
+import HeroBack from "./HeroBack";
 
 
-export { HeroPage, HeroList, Button, DFront }
+export {HeroFront, DFront, HeroBack }

@@ -1,13 +1,22 @@
 import React from "react";
 import "../Styles/style.scss";
 import { motion } from "framer-motion";
-import { FoodAd, appAd } from "../assets";
 import Button from "./Button";
 
-const HeroPage: React.FC = () => {
+interface HeroPageProps {
+  className: string;
+  htext: string;
+  ptext: string;
+}
+
+const HeroPage: React.FC<HeroPageProps> = ({
+  className,
+  htext,
+  ptext,
+}) => {
   return (
     <React.Fragment>
-      <div className="heropage">
+      <div className={className}>
         <motion.div
           className="heropage__container"
           initial={{ opacity: 0 }}
@@ -16,16 +25,12 @@ const HeroPage: React.FC = () => {
         >
           <div className="hero-mage">
             <div className="overlay">
-              <h5 className="r-text">Food app</h5>
-              <h2 className="h-text">
-                Why stay hungry when you can <br /> order from Bella Onojie
-              </h2>
-              <p className="p-text">
-                Download the Bella Onojie's food app now on
-              </p>
+              <h5 className="r-text">Food App</h5>
+              <h2 className="h-text">{htext}</h2>
+              <p className="p-text">{ptext}</p>
               <div className="btnss">
-                <button className="obtn">Playstore</button>
-                <button className="ibtn">Appstore</button>
+                <Button label="Playstore" className="obtn" />
+                <Button label="Appstore" className="ibtn" />
               </div>
             </div>
             {/* <div className="phones">

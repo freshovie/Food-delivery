@@ -191,12 +191,12 @@
   }
 }
 
-.heropage {
+.heropage,
+.heroback {
   margin-top: 130px;
   .heropage__container {
     position: relative; /* Ensure the container is positioned relatively */
     .hero-mage {
-      background: url(../assets/HeroImg.png);
       background-size: cover;
       background-repeat: no-repeat;
       height: 100dvh;
@@ -206,21 +206,6 @@
       justify-content: center;
       align-items: center;
       position: relative; /* Ensure the hero image is positioned relatively */
-      .phones {
-        .mee {
-          margin-top: 7rem;
-        }
-        position: absolute;
-        top: 70%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 2000;
-        .ad-img {
-          width: 100%;
-          margin: 0 $base-spacing;
-        }
-      }
       .overlay {
         position: absolute;
         top: 0;
@@ -252,8 +237,32 @@
         flex-direction: column;
       }
     }
+  }
+}
+
+.heropage {
+  .heropage__container {
+    .hero-mage {
+      background: url(../assets/HeroImg.png);
+      .phones {
+        .mee {
+          margin-top: 7rem;
+        }
+        position: absolute;
+        top: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2000;
+        .ad-img {
+          width: 100%;
+          margin: 0 $base-spacing;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
     .phones {
-      //   flex-direction: column;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -271,6 +280,19 @@
       .mobi-view {
         .ad-img {
           width: 150px;
+        }
+      }
+    }
+  }
+}
+
+.heroback {
+  .heropage__container {
+    .hero-mage {
+      background: url(../assets/FooterImg.png);
+      .overlay {
+        .r-text {
+          display: none;
         }
       }
     }

@@ -1,6 +1,6 @@
 import React from "react";
 import "../Styles/style.scss";
-import DisplayImg from "./DisplayImg";
+import DisplayImg from "../Models/DisplayImg";
 import { SecondApp, ThirdApp, firstApp } from "../assets";
 
 function DFront() {
