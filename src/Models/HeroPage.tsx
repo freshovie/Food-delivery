@@ -5,6 +5,7 @@ import Button from "./Button";
 
 interface HeroPageProps {
   className: string;
+  rtext?: string;
   htext: string;
   ptext: string;
 }
@@ -13,6 +14,7 @@ const HeroPage: React.FC<HeroPageProps> = ({
   className,
   htext,
   ptext,
+  rtext,
 }) => {
   return (
     <React.Fragment>
@@ -25,7 +27,7 @@ const HeroPage: React.FC<HeroPageProps> = ({
         >
           <div className="hero-mage">
             <div className="overlay">
-              <h5 className="r-text">Food App</h5>
+            {rtext && <h5 className="r-text">{rtext}</h5>}
               <h2 className="h-text">{htext}</h2>
               <p className="p-text">{ptext}</p>
               <div className="btnss">

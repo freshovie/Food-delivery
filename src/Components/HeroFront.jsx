@@ -6,6 +6,7 @@ function HeroFront() {
     <React.Fragment>
       <HeroPage
         className="heropage"
+        rtext="Food App"
         htext="Why stay hungry when you can order from Bella Onojie"
         ptext="Download the Bella Onojie's food app now on"
       />
