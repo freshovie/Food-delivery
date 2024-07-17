@@ -51,6 +51,9 @@
   color: $tertiary-color;
   text-align: center;
   margin: $base-spacing 0;
+  @media screen and (max-width: 768px) {
+    color: $tertiary-color;
+  }
 }
 .p-text {
   font-size: 24px;
@@ -245,11 +248,6 @@
       align-items: center;
       position: relative;
       background-color: $tertiary-color;
-      .p-text,
-      .h-text,
-      .r-text {
-        color: $text-color;
-      }
       .btn-div {
         flex-direction: column;
       }
