@@ -35,14 +35,6 @@ const HeroPage: React.FC<HeroPageProps> = ({
                 <Button label="Appstore" className="ibtn" />
               </div>
             </div>
-            {/* <div className="phones">
-              <div>
-                <img src={appAd} alt="" className="ad-img" />
-              </div>
-              <div className="mee">
-                <img src={FoodAd} alt="" className="ad-img" />
-              </div>
-            </div> */}
           </div>
         </motion.div>
       </div>
