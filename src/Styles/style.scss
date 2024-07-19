@@ -293,92 +293,48 @@
 }
 
 .herofront {
-  position: relative;
-  .phones {
-    padding: 2rem; /* Add some padding for better spacing on all sides */
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    left: 50%; /* Center align with respect to the parent */
-    top: 70%;
-    transform: translateX(
-      -50%
-    ); /* Shift left by 50% of its width for true centering */
-    align-items: center;
-    margin: 0 $base-spacing;
-    z-index: 100;
-
-    .bye,
-    .mee {
-      transition: transform 0.3s ease-in-out; /* Add smooth transition for hover effect */
-    }
-
-    .mee {
-      margin-top: 10rem;
-    }
-
-    @media screen and (max-width: 769px) {
-      position: relative;
-      left: 0;
-      top: auto; /* Reset the top property */
-      transform: none; /* Remove transform for smaller screens */
-      margin: 0 auto;
-      flex-direction: column; /* Stack the elements vertically */
-      align-items: center; /* Center align items vertically */
-
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ensure the container takes the full viewport height */
+  
+    .phones {
+      position: absolute;
+      display: flex;
+      flex-direction: row; /* Keep flex-direction as row */
+      justify-content: center;
+      align-items: center;
+      left: 50%; /* Center align horizontally */
+      top: 50%; /* Center align vertically */
+      transform: translate(-50%, -50%); /* Adjust for proper centering */
+      z-index: 100;
+  
+      .bye,
+      .mee {
+        transition: transform 0.3s ease-in-out; /* Add smooth transition for hover effect */
+        width: 150px; /* Default image size */
+      }
+  
       .mee {
         margin-top: 0;
       }
-
-      .bye,
-      .mee {
-        width: 80%; /* Set a relative width */
-        max-width: 200px; /* Ensure it doesn't get too large */
-      }
     }
+  
+    .bye:hover,
+    .mee:hover {
+      transform: scale(1.05); /* Slight zoom effect on hover */
+    }
+    @media screen and (max-width: 769px) {
+        position: static; /* Use static positioning on smaller screens */
+        flex-direction: row; /* Ensure row direction on smaller screens */
+        justify-content: center; /* Center align items horizontally */
+        align-items: center; /* Center align items vertically */
+        width: 100%; /* Ensure full width on smaller screens */
+        transform: none; /* Remove transform for smaller screens */
+  
+        .bye,
+        .mee {
+          width: 50%; /* Set a relative width */
+          max-width: 150px; /* Ensure it doesn't get too large */
+        }
+      }
   }
-
-  .bye:hover,
-  .mee:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
-  }
-}
-
-// .phones {
-//     position: absolute;
-//     top: 70%;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     z-index: 2000;
-//     .mee {
-//       margin-top: 7rem;
-//     }
-//     .ad-img {
-//       width: 100%;
-//       margin: 0 $base-spacing;
-//     }
-//     @media screen and (max-width: 768px) {
-//         .phones {
-//           display: flex;
-//           justify-content: center;
-//           align-items: center;
-//           position: relative;
-//           width: 100%;
-//           top: auto;
-//           .ad-img {
-//             width: 280px;
-//             height: auto;
-//           }
-//         }
-//       }
-//       @media screen and (max-width: 576px) {
-//         .mobi-app {
-//           .mobi-view {
-//             .ad-img {
-//               width: 150px;
-//             }
-//           }
-//         }
-//       }
-//   }

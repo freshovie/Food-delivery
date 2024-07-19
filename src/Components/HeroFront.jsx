@@ -13,12 +13,14 @@ function HeroFront() {
           htext="Why stay hungry when you can order from Bella Onojie"
           ptext="Download the Bella Onojie's food app now on"
         />
-        <div className="phones">
-          <div className="bye">
-            <img src={appAd} alt="" className="ad-img" />
-          </div>
-          <div className="mee">
-            <img src={FoodAd} alt="" className="ad-img" />
+        <div className="container">
+          <div className="phones">
+            <div className="bye">
+              <img src={appAd} alt="App Advertisement" className="ad-img" />
+            </div>
+            <div className="mee">
+              <img src={FoodAd} alt="Food Advertisement" className="ad-img" />
+            </div>
           </div>
         </div>
       </div>
