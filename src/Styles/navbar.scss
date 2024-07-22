@@ -1,39 +1,51 @@
-@import "variables";
+@import "variables"; // Import the variables file for use in this stylesheet
 
 .navbar {
+  // Styling for the navigation links
   .nav-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.5rem 1rem;
+    display: flex; // Use flexbox for layout
+    align-items: center; // Center items vertically
+    justify-content: center; // Center items horizontally
+    padding: 0.5rem 1rem; // Add padding around the links
   }
 
+  // Styling for the brand element within the navbar
   .navbar-brand {
-    display: flex;
-    align-items: center;
+    display: flex; // Use flexbox for layout
+    align-items: center; // Center items vertically
   }
+
+  // Styling for the collapsible navbar section
   .navbar-collapse {
+    // Styling for the navbar navigation items
     .navbar-nav {
-      gap: 3rem;
+      gap: 3rem; // Set space between navigation items
+
       a {
-        color: $text-color;
-        font-weight: 600;
+        color: $text-color; // Set the color of the links
+        font-weight: 600; // Set font weight to 600 for bold text
+
+        // Change link color on hover
         &:hover {
-          color: $quaternary-color;
+          color: $quaternary-color; // Change color to quaternary color on hover
         }
       }
     }
   }
+
+  // Media query for screens with a maximum width of 351px
   @media screen and (max-width: 351px) {
     .container-fluid {
-      flex-direction: column;
-      align-items: center;
+      flex-direction: column; // Stack container items vertically
+      align-items: center; // Center items horizontally
     }
   }
+
+  // Media query for screens with a maximum width of 1024px
   @media screen and (max-width: 1024px) {
     .navbar-collapse {
       .navbar-nav {
-        gap: 0.1rem;
+        gap: 0.1rem; // Reduce space between navigation items
       }
     }
   }

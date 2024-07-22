@@ -1,12 +1,35 @@
+// Primary color used for main elements like buttons, headers, etc.
 $primary-color: #F04B3d;
+
+// Main text color used for primary text content
 $text-color: #252b42;
+
+// Paragraph text color used for regular text content
 $p-color: #737373;
+
+// Tertiary color used for elements like backgrounds or highlights
 $tertiary-color: #fff;
+
+// Quaternary color used for secondary accents, such as button highlights
 $quaternary-color: #FA4A0c;
+
+// Background color used for dark background elements
 $back-color: #171010;
+
+// Bold paragraph text color used for emphasized text
 $boldp-color: #5C5C5C;
+
+// Transparent color used for invisible elements
 $trans-color: transparent;
+
+// Overlay background color used for overlays, with opacity for transparency
 $overlay-bg-color: rgba(0, 0, 0, 0.7);
+
+// Alternative overlay background color with a lighter opacity
 $overlayBg: rgba(255, 255, 255, 0.9);
+
+// Base spacing unit used for consistent spacing throughout the design
 $base-spacing: 1rem;
+
+// Horizontal rule color used for dividing lines
 $hr-color: #E4E4E4;

@@ -1,29 +1,36 @@
-@import "variables";
+@import "variables"; // Import the variables file for use in this stylesheet
 
 .footer {
+  // Styling for the footer logo
   .footer-logo {
-    cursor: pointer;
+    cursor: pointer; // Change cursor to pointer when hovering over the logo
   }
+
+  // Styling for the icons container within the footer
   .goIcons {
-    gap: 2rem;
+    gap: 2rem; // Set a gap between the icons
 
+    // Styling for individual icons
     .icons {
-      color: $quaternary-color;
-      font-size: 40px;
-      transition: color 0.3s ease;
-      cursor: pointer;
+      color: $quaternary-color; // Set the initial color of the icons
+      font-size: 40px; // Set the font size of the icons
+      transition: color 0.3s ease; // Smooth transition effect for color changes
+      cursor: pointer; // Change cursor to pointer when hovering over the icons
 
+      // Change icon color on hover
       &:hover {
-        color: $text-color;
+        color: $text-color; // Change color to text color on hover
       }
     }
   }
 
+  // Styling for the copyright section
   .copy-write {
     li {
+      // Styling for links within the copyright list
       a {
-        text-decoration: none;
-        font-weight: 500;
+        text-decoration: none; // Remove underline from links
+        font-weight: 500; // Set the font weight to 500
       }
     }
   }

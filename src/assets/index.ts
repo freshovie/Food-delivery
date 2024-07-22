@@ -1,3 +1,4 @@
+// Import image assets from their respective paths
 import appAd from "./app-ad.png";
 import firstApp from "./FirstApp.png";
 import FoodAd from "./Food-ad.png";
@@ -9,6 +10,7 @@ import SecondApp from "./SecondApp.png";
 import ThirdApp from "./ThirdApp.png";
 import Left from "./left.png";
 
+// Export all imported image assets
 export {
   appAd,
   firstApp,
