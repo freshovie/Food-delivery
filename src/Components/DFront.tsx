@@ -1,9 +1,11 @@
 import React from "react";
-import "../Styles/style.scss";
-import DisplayImg from "../Models/DisplayImg";
-import { SecondApp, ThirdApp, firstApp } from "../assets";
+import "../Styles/style.scss"; // Import SCSS styling
+import DisplayImg from "../Models/DisplayImg"; // Import DisplayImg component
+import { SecondApp, ThirdApp, firstApp } from "../assets"; // Import image assets
 
+// Define the DFront functional component
 function DFront() {
+  // Array of data to be displayed
   const displayData = [
     {
       images: firstApp,
@@ -30,18 +32,19 @@ function DFront() {
 
   return (
     <React.Fragment>
+      {/* Map over displayData to render DisplayImg components */}
       {displayData.map((item, index) => (
         <DisplayImg
-          key={index}
-          images={item.images}
-          className={item.className}
-          ptext={item.ptext}
-          htext={item.htext}
-          stext={item.stext}
+          key={index} // Unique key for each item
+          images={item.images} // Image source
+          className={item.className} // Class name for styling
+          ptext={item.ptext} // Paragraph text
+          htext={item.htext} // Header text
+          stext={item.stext} // Subtext
         />
       ))}
     </React.Fragment>
   );
 }
 
-export default DFront;
+export default DFront; // Export the DFront component

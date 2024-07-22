@@ -1,9 +1,11 @@
 import React from "react";
-import { HeroPage } from "../Models";
+import { HeroPage } from "../Models"; // Import HeroPage component
 
+// Define the HeroBack functional component
 function HeroBack() {
   return (
     <React.Fragment>
+      {/* HeroPage component with props */}
       <HeroPage
         className="heroback"
         htext="Download the app now"
@@ -13,4 +15,4 @@ function HeroBack() {
   );
 }
 
-export default HeroBack;
+export default HeroBack; // Export the HeroBack component
