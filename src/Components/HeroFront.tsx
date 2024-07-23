@@ -15,21 +15,9 @@ function HeroFront() {
           rtext="Food App"
           htext="Why stay hungry when you can order from Bella Onojie"
           ptext="Download the Bella Onojie's food app now on"
+          imgd={appAd}
+          imgr={FoodAd}
         />
-        {/* Container div for layout */}
-        <div className="container">
-          {/* Phones div to contain the advertisement images */}
-          <div className="phones">
-            {/* Advertisement image for the app */}
-            <div className="bye">
-              <img src={appAd} alt="App Advertisement" className="ad-img" />
-            </div>
-            {/* Advertisement image for the food */}
-            <div className="mee">
-              <img src={FoodAd} alt="Food Advertisement" className="ad-img" />
-            </div>
-          </div>
-        </div>
       </div>
     </React.Fragment>
   );

@@ -336,17 +336,17 @@
   position: relative; // Position relative for child positioning
   width: 100%; // Full width
   height: 100dvh; // Full viewport height
-
+.container{
+  position: absolute; // Absolute positioning for .phones
+  left: 45%; // Center align horizontally
+  top: 1100px; // Adjust vertical position
+  z-index: 1; // Ensure on top of other elements
+  transform: translate(-50%, -50%); // Centering adjustment
   .phones {
-    position: absolute; // Absolute positioning for .phones
     display: flex; // Use flexbox for layout
-    flex-direction: row; // Horizontal layout
-    justify-content: space-between; // Space items evenly
+    justify-content: center; // Space items evenly
     align-items: center; // Center items vertically
-    left: 50%; // Center align horizontally
-    top: 1100px; // Adjust vertical position
-    transform: translate(-50%, -50%); // Centering adjustment
-    z-index: 1; // Ensure on top of other elements
+    gap: 200px;
 
     .bye,
     .mee {
@@ -358,6 +358,7 @@
       margin-top: 0; // Remove top margin
     }
   }
+}
 
   .bye:hover,
   .mee:hover {
@@ -382,6 +383,13 @@
     .mee {
       width: 50%; // Set relative width
       max-width: 150px; // Maximum width
+    }
+  }
+  @media screen and (max-width: 450px){
+    .phones{
+      .bye, .mee{
+        
+      }
     }
   }
 }
