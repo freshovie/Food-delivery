@@ -348,6 +348,7 @@
     left: 45%; // Center align horizontally
     top: 1100px; // Adjust vertical position
     z-index: 1; // Ensure on top of other elements
+    width: 100%;
     transform: translate(-50%, -50%); // Centering adjustment
     .phones {
       display: flex; // Use flexbox for layout
@@ -358,12 +359,16 @@
       .bye,
       .mee {
         transition: transform 0.3s ease-in-out; // Smooth transition for hover effect
-        width: 150px; // Default image width
+        width: 100px; // Default image width
       }
 
       .mee {
         margin-top: 0; // Remove top margin
       }
+      .ad-img{
+        // width: 100%;
+        max-width: 500px;
+            }
     }
   }
 
@@ -374,23 +379,29 @@
 
   // Media query for screens with a maximum width of 769px
   @media screen and (max-width: 769px) {
-    .phones {
-      position: relative; // Change to relative position
-      left: 0; // Reset left positioning
-      top: auto; // Reset top positioning
-      transform: none; // Remove transform
-      margin: 0; // Remove margin
-      flex-direction: row; // Ensure row direction
-      align-items: center; // Center items vertically
-      justify-content: center; // Center items horizontally
-      width: 100%; // Full width
-      gap: 0;
-    }
+    .container {
+      .phones {
+        transform: none; // Remove transform
+        left: 0; // Reset left positioning
+        top: auto; // Reset top positioning
+        position: relative; // Change to relative position
+        margin: 0; // Remove margin
+        flex-direction: row; // Ensure row direction
+        align-items: center; // Center items vertically
+        justify-content: center; // Center items horizontally
+        width: 100%; // Full width
+        gap: 10px;
+      }
 
-    .bye,
-    .mee {
-      width: 50%; // Set relative width
-      max-width: 400px; // Maximum width
+      .bye,
+      .mee {
+        width: 45%; // Set relative width
+        max-width: 100px; // Maximum width
+      }
+      .ad-img{
+        width: 150%;
+        max-width: 500px;
+      }
     }
   }
   @media screen and (max-width: 450px) {
