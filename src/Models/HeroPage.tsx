@@ -62,11 +62,11 @@ const HeroPage: React.FC<HeroPageProps> = ({
                 <div className="phones">
                   {/* Advertisement image for the app */}
                   <div className="bye">
-                    <img src={imgd} alt="App Advertisement" className="ad-img" />
+                    <img src={imgd} alt="" className="ad-img" />
                   </div>
                   {/* Advertisement image for the food */}
                   <div className="mee">
-                    <img src={imgr} alt="Food Advertisement" className="ad-img" />
+                    <img src={imgr} alt="" className="ad-img" />
                   </div>
                 </div>
                 </center>
